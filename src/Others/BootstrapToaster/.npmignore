@@ -1,0 +1,5 @@
+/docs
+/images
+/.github
+*.code-workspace
+.gitignore

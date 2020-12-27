@@ -1,0 +1,15 @@
+﻿@using NToastNotify.Helpers
+@model NToastNotify.Components.ToastNotificationViewModel
+<script src=@Url.Content(@Model.LibraryJsPath) type="text/javascript"></script>
+<script>
+    if (nToastNotify) {
+        nToastNotify.init({
+            firstLoadEvent: 'DOMContentLoaded',
+            messages: @Html.Raw(Model.ToastMessagesJson),
+            responseHeaderKey: '@Model.ResponseHeaderKey',
+            requestHeaderKey: '@Model.RequestHeaderKey',
+            libraryDetails:@Html.Raw(Model.LibraryDetails.ToJson()),
+            disableAjaxToasts:@Model.DisableAjaxToasts.ToString().ToLower()
+        });
+    };
+</script>

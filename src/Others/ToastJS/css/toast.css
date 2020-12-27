@@ -1,0 +1,9 @@
+/*
+ * @author: Jacky Wong
+ * Toast component
+ */
+
+#toast-container {
+  right: 25px;
+  z-index: 1040;
+}
